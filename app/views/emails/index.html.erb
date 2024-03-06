@@ -1,0 +1,18 @@
+
+<% turbo_frame_tag %>
+<!-- <%= button_to "Recevoir un Email", emails_path, {method: "post", data: {turbo_frame: "email-details"}, class:"btn m-5 btn-warning" }%> -->
+
+<%= button_to "Recevoir un Email", emails_path, data: {turbo_frame: "email-details"}, class:"btn m-5 btn-warning" %> 
+
+
+<table class="table table-striped">
+    <tr>
+        <th>Liste des emails</th>
+        <th>Email sélectionné</th>
+    </tr>
+    <tr id="emails"> 
+        <td><%= render @all_emails %></td>
+    </tr>  
+        
+</table>
+
